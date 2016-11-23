@@ -7,16 +7,14 @@ function getTemp(location){
   let url = `${base_url}&appid=${api_key}&q=${encodedLocation}`;
   return(
     axios.get(url).then(function(res){
-      // debugger;
       if(res.data.cod && res.data.message){
         throw new Error(res.data.message);
       }
       else{
         return res.data.main.temp;
       }
-    }, function(err){
-      // throw new Error(err.response.data.message);
-      throw new Error("Unable to fetch temperature from the location");
+    }, function(error){
+      throw new Error(error.response.data.message);
     })
   )
 }
