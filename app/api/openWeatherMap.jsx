@@ -14,7 +14,8 @@ function getTemp(location){
         return res.data.main.temp;
       }
     }, function(error){
-      throw new Error(error.response.data.message);
+      // throw new Error(error.response.data.message);
+      throw new Error('Unable to fetch temperatue!');
     })
   )
 }
