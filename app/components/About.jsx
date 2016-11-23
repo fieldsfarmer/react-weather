@@ -2,7 +2,7 @@ var React = require('react');
 
 var About = ()=>(
   <div>
-    <h1 className="text-center">About</h1>
+    <h1 className="text-center page-title">About</h1>
     <p>This is a web application built on ReactJS using api from Open Weather Map.</p>
     <p>Here are the tools I used:</p>
     <ul>
